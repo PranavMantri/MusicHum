@@ -1,5 +1,3 @@
-# Case Study: Interstellar
-
 Interstellar demonstrates the central role of the processing layer within Zimmer’s system, particularly through timbre and orchestration. Earlier in this analysis, Zimmer’s approach was described as beginning with an abstract narrative input that is translated into musical behavior. In Interstellar, that input is not simply “space,” but the relationship between cosmic scale and human vulnerability. Rather than relying on conventional orchestral scoring associated with science fiction, Zimmer constructs a sonic system around the pipe organ, an instrument whose resonance, texture, and cultural associations shape how the film’s world is emotionally perceived.
 
 ## “Cornfield Chase”: Intimacy and Repetition

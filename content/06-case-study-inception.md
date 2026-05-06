@@ -1,5 +1,3 @@
-# Case Study: Inception
-
 Inception demonstrates how Zimmer’s system begins with abstraction. While the film is structured around dreams, the score is built around time: stretched time, layered time, and collapsing temporal scales. Rather than illustrating dream imagery directly, the music encodes the film’s underlying temporal logic.
 
 ## “Time”: Expansion and Emotional Accumulation

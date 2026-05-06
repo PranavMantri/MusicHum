@@ -24,6 +24,27 @@ npm run build
 
 The production build is emitted to `dist/`.
 
+## Deploy to GitHub Pages
+
+This repo includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+When changes are pushed to `main`, GitHub will install dependencies, run:
+
+```bash
+npm run build:pages
+```
+
+and publish the generated `dist/` directory to GitHub Pages.
+
+The expected project Pages URL is:
+
+```text
+https://pranavmantri.github.io/MusicHum/
+```
+
+In the GitHub repository settings, set **Pages > Build and deployment > Source** to
+**GitHub Actions**. After the first successful run, that URL is the link you can
+share.
+
 ## Editing Page Content
 
 The main written content lives in Markdown files under `content/`, so you can edit the argument without touching React code:

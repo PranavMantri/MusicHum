@@ -1,5 +1,3 @@
-# Case Study: The Dark Knight
-
 The Dark Knight demonstrates how Zimmer’s system encodes character through minimal musical material. Rather than assigning the Joker a traditional, fully developed theme, the score reduces his identity to instability and tension. This reflects the film’s conceptual input—chaos—which is translated into sound through modular motifs, timbre, and texture.
 
 ## Joker Motif: Minimalism and Instability
