@@ -119,3 +119,42 @@ export const inceptionSpotifyTracks = [
     height: 352,
   },
 ];
+
+export const interstellarSpotifyTracks = [
+  {
+    id: 'track-6pWgRkpqVfxnj3WuIcJ7WP',
+    label: 'Cornfield Chase',
+    type: 'track',
+    film: 'Interstellar',
+    spotifyId: '6pWgRkpqVfxnj3WuIcJ7WP',
+    src: 'https://open.spotify.com/embed/track/6pWgRkpqVfxnj3WuIcJ7WP?utm_source=generator',
+    height: 352,
+  },
+  {
+    id: 'track-1fTAs4YpBA7R21i0iB4j54',
+    label: 'Stay',
+    type: 'track',
+    film: 'Interstellar',
+    spotifyId: '1fTAs4YpBA7R21i0iB4j54',
+    src: 'https://open.spotify.com/embed/track/1fTAs4YpBA7R21i0iB4j54?utm_source=generator',
+    height: 352,
+  },
+  {
+    id: 'track-6GUq9y0Iy5QrAuPYxTrFp2',
+    label: 'S.T.A.Y.',
+    type: 'track',
+    film: 'Interstellar',
+    spotifyId: '6GUq9y0Iy5QrAuPYxTrFp2',
+    src: 'https://open.spotify.com/embed/track/6GUq9y0Iy5QrAuPYxTrFp2?utm_source=generator',
+    height: 352,
+  },
+  {
+    id: 'track-5aaXqH8rgKZxg61HjECldi',
+    label: 'No Time for Caution',
+    type: 'track',
+    film: 'Interstellar',
+    spotifyId: '5aaXqH8rgKZxg61HjECldi',
+    src: 'https://open.spotify.com/embed/track/5aaXqH8rgKZxg61HjECldi?utm_source=generator',
+    height: 352,
+  },
+];

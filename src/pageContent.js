@@ -9,6 +9,7 @@ import darkKnight from '../content/07-case-study-the-dark-knight.md?raw';
 import interstellar from '../content/08-case-study-interstellar.md?raw';
 import dune from '../content/09-case-study-dune.md?raw';
 import conclusion from '../content/10-conclusion.md?raw';
+import references from '../content/11-references.md?raw';
 
 function parseMarkdown(raw, eyebrow) {
   const lines = raw.trim().split('\n');
@@ -37,4 +38,7 @@ export const pageContent = [
   parseMarkdown(interstellar, 'Page 8'),
   parseMarkdown(dune, 'Page 9'),
   parseMarkdown(conclusion, 'Page 10'),
+  parseMarkdown(references, 'References'),
 ];
+
+export const referencesPageIndex = pageContent.length - 1;
