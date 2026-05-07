@@ -638,17 +638,6 @@ h2 {
   line-height: 1.68;
 }
 
-.article-body .reference-entry {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0.75rem;
-}
-
-.reference-entry span {
-  color: #d7a557;
-  font-weight: 800;
-}
-
 .article-body em {
   color: #f1eadf;
   font-family: "Instrument Serif", Georgia, serif;
@@ -734,6 +723,36 @@ h2 {
 
 .references-shell {
   max-width: 920px;
+}
+
+.references-content {
+  max-width: 920px;
+}
+
+.works-cited-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 860px;
+  margin: 2rem 0 0;
+  padding-left: 1.6rem;
+  color: #d8d2c8;
+  font-size: clamp(1rem, 1.45vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.works-cited-list li {
+  padding-left: 0.4rem;
+}
+
+.works-cited-list li::marker {
+  color: #d7a557;
+  font-weight: 800;
+}
+
+.works-cited-list em {
+  color: #f1eadf;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.08em;
 }
 
 .reference-jump-list {

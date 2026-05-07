@@ -513,6 +513,9 @@ function SuggestedNextButton({ activeView, onNavigate }) {
 }
 
 function ReferencesPage({ returnView, onReturn, onNavigate }) {
+  const referencesPage = pageContent[referencesPageIndex];
+  const references = referencesPage.body.filter((block) => block.type === 'paragraph');
+
   return (
     <section className="site-view">
       <div className="references-shell">
@@ -529,7 +532,15 @@ function ReferencesPage({ returnView, onReturn, onNavigate }) {
             Back to {returnView === 'home' ? 'Home' : modules.find((module) => module.id === returnView)?.nav}
           </button>
         )}
-        <MarkdownPage pageIndex={referencesPageIndex} plain onInternalLink={onNavigate} />
+        <article className="plain-page-content references-content">
+          <p className="eyebrow">{referencesPage.eyebrow}</p>
+          <h2>{referencesPage.title}</h2>
+          <ol className="works-cited-list">
+            {references.map((reference) => (
+              <li key={reference.text}>{renderInlineMarkdown(reference.text, onNavigate)}</li>
+            ))}
+          </ol>
+        </article>
         <div className="reference-jump-list">
           <p className="eyebrow">Jump to where each source is used</p>
           {referenceSourceLinks.map((link) => (
