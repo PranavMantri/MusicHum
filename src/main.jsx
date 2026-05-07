@@ -52,6 +52,14 @@ const pageEmbeds = {
       height: 152,
       afterHeading: '“Mombasa”: Layered Motion and Temporal Disorientation',
     },
+    {
+      title: 'Mombasa movie scene: the main part starts 2 minutes in.',
+      type: 'youtube',
+      src: 'https://www.youtube.com/embed/y5-Srk_RT0w?start=120',
+      height: 315,
+      warning: 'Content warning: this scene contains gun violence. If you are uncomfortable with violence involving guns, skip watching it.',
+      afterParagraph: 'Zimmer achieves this through timbre and texture, layering acoustic and electronic sounds to create a dense, kinetic soundscape.',
+    },
   ],
   7: [
     {
@@ -148,7 +156,7 @@ const modules = [
   },
 ];
 
-const viewOrder = ['home', ...modules.map((module) => module.id), 'references'];
+const viewOrder = ['home', 'breakdown', ...modules.map((module) => module.id), 'references'];
 const caseStudies = [
   { id: 'inception', title: 'Inception', page: 6, relatedModules: ['inputs', 'modularity'] },
   { id: 'dark-knight', title: 'The Dark Knight', page: 7, relatedModules: ['modularity'] },
@@ -165,6 +173,14 @@ const suggestedNextByView = {
   interstellar: 'dune',
   dune: 'home',
 };
+const referenceSourceLinks = [
+  { label: 'Chion, Audio-Vision', target: 'home' },
+  { label: 'Gorbman, Unheard Melodies', target: 'inputs' },
+  { label: 'Ikhsan and Midyanti on “Time”', target: 'inception' },
+  { label: 'Luo on Dune acoustics', target: 'dune' },
+  { label: 'Meyer on leitmotif', target: 'modularity' },
+  { label: 'Zimmer interview on collaboration', target: 'feedback' },
+];
 
 function SpotifyEmbed({ embed }) {
   if (embed.type === 'youtube') {
@@ -191,6 +207,9 @@ function SpotifyEmbed({ embed }) {
   return (
     <div className="embed-block">
       <p>{embed.title}</p>
+      <div className="playback-note">
+        Spotify may only play a preview unless you are logged into Spotify in this browser.
+      </div>
       <iframe
         data-testid="embed-iframe"
         title={embed.title}
@@ -250,8 +269,10 @@ function MarkdownPage({ pageIndex, plain = false, onInternalLink }) {
   const page = pageContent[pageIndex];
   const embeds = pageEmbeds[pageIndex] || [];
   const inlineEmbeds = embeds.filter((embed) => embed.afterHeading);
+  const paragraphEmbeds = embeds.filter((embed) => embed.afterParagraph);
   const beforeBodyEmbeds = embeds.filter((embed) => embed.placement === 'beforeBody');
   const bottomEmbeds = embeds.filter((embed) => !embed.afterHeading && embed.placement !== 'beforeBody');
+  const isReferencesPage = pageIndex === referencesPageIndex;
 
   return (
     <article className={plain ? 'plain-page-content' : 'content-card'}>
@@ -263,13 +284,22 @@ function MarkdownPage({ pageIndex, plain = false, onInternalLink }) {
       <div className="article-body">
         {page.body.map((block, blockIndex) => {
           const matchingInlineEmbeds = inlineEmbeds.filter((embed) => block.text === embed.afterHeading);
+          const matchingParagraphEmbeds = paragraphEmbeds.filter((embed) => block.text === embed.afterParagraph);
 
           return (
             <React.Fragment key={`${block.text}-${blockIndex}`}>
               {block.type === 'heading'
                 ? <h3>{renderInlineMarkdown(block.text, onInternalLink)}</h3>
-                : <p>{renderInlineMarkdown(block.text, onInternalLink)}</p>}
+                : (
+                  <p className={isReferencesPage ? 'reference-entry' : ''}>
+                    {isReferencesPage && <span>{blockIndex + 1}.</span>}
+                    {renderInlineMarkdown(block.text, onInternalLink)}
+                  </p>
+                )}
               {matchingInlineEmbeds.map((embed) => (
+                <SpotifyEmbed key={embed.src} embed={embed} />
+              ))}
+              {matchingParagraphEmbeds.map((embed) => (
                 <SpotifyEmbed key={embed.src} embed={embed} />
               ))}
             </React.Fragment>
@@ -288,14 +318,19 @@ function MarkdownPage({ pageIndex, plain = false, onInternalLink }) {
 }
 
 function Landing({ onNavigate }) {
-  const titlePage = pageContent[0];
   const introPage = pageContent[1];
 
   return (
     <section className="site-view landing-view">
+      <div className="title-screen">
+        <p className="eyebrow">Interactive essay</p>
+        <h1>Hans Zimmer&apos;s Music Production as a System</h1>
+        <p>By Pranav Mantri PYM2105</p>
+      </div>
+
       <div className="hero-copy">
-        <p className="eyebrow">Interactive system map</p>
-        <h1>{titlePage.title}</h1>
+        <p className="eyebrow">Introduction</p>
+        <h1>{introPage.title}</h1>
         <div className="intro-copy">
           {introPage.body.map((block) => (
             block.type === 'heading'
@@ -306,23 +341,63 @@ function Landing({ onNavigate }) {
         <div className="site-guide">
           <h2>How to use this site</h2>
           <p>
-            This site is organized like the system it describes. Start with one of the four process modules below, then follow the related case-study branches to see how that part of Zimmer’s method operates in specific films.
+            This site is organized like the system it describes. Click the System Breakdown button below to open the navigation hub, then start with one of the four process modules and follow the related case-study branches to see how that part of Zimmer’s method operates in specific films.
           </p>
           <p>
             Use the module cards to move through the main argument, the case-study cards to branch into film examples, and the menu button in the upper-right to jump anywhere at any time. Citation links open the References page and provide a return button back to where you came from.
           </p>
         </div>
+        <div className="spotify-login-box">
+          <h2>Spotify playback note</h2>
+          <p>
+            Some pages include Spotify embeds. For full-track playback, <a href="https://accounts.spotify.com/en/login" target="_blank" rel="noreferrer">log into Spotify</a> in this same browser before using the site; otherwise Spotify may only play short previews.
+          </p>
+          <p>
+            If you log in after opening this site, refresh the page so the embedded players can detect your Spotify session.
+          </p>
+        </div>
+        <button type="button" className="breakdown-cta" onClick={() => onNavigate('breakdown')}>
+          Click to go to System Breakdown
+        </button>
       </div>
+    </section>
+  );
+}
 
-      <div className="module-grid">
-        {modules.map((module) => (
+function SystemBreakdown({ onNavigate }) {
+  const thesisBlock = pageContent[1].body.find((block, index, blocks) => (
+    block.type === 'paragraph' && blocks[index - 1]?.type === 'heading' && blocks[index - 1].text === 'Thesis'
+  ));
+
+  return (
+    <section className="site-view breakdown-view">
+      <header className="module-header">
+        <button type="button" className="back-home" onClick={() => onNavigate('home')}>
+          Home
+        </button>
+        <p className="eyebrow">Navigation hub</p>
+        <h1>System Breakdown</h1>
+        <p>Choose a system element to follow the main argument, or branch into a case study to see how the process operates inside a specific film.</p>
+      </header>
+      {thesisBlock && (
+        <div className="driving-thesis">
+          <p className="eyebrow">Driving thesis</p>
+          <p>{renderInlineMarkdown(thesisBlock.text, onNavigate)}</p>
+        </div>
+      )}
+
+      <section className="home-section">
+        <p className="eyebrow">System elements</p>
+        <div className="module-grid">
+          {modules.map((module) => (
           <button key={module.id} type="button" className={`module-card module-${module.id}`} onClick={() => onNavigate(module.id)}>
             <span>{module.nav}</span>
             <h2>{module.title}</h2>
             <p>{module.summary}</p>
           </button>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
 
       <section className="hub-cases">
         <p className="eyebrow">Case-study branches</p>
@@ -343,9 +418,14 @@ function ModulePage({ module, onNavigate, onInternalLink }) {
   return (
     <section className="site-view module-view">
       <header className="module-header">
-        <button type="button" className="back-home" onClick={() => onNavigate('home')}>
-          System map
-        </button>
+        <div className="page-jump-row">
+          <button type="button" className="back-home" onClick={() => onNavigate('home')}>
+            Home
+          </button>
+          <button type="button" className="back-home" onClick={() => onNavigate('breakdown')}>
+            System Breakdown
+          </button>
+        </div>
         <p className="eyebrow">System module</p>
         <h1>{module.title}</h1>
         <p>{module.summary}</p>
@@ -384,9 +464,14 @@ function CaseStudyPage({ study, onNavigate, onInternalLink }) {
   return (
     <section className="site-view case-view">
       <header className="module-header">
-        <button type="button" className="back-home" onClick={() => onNavigate('home')}>
-          System map
-        </button>
+        <div className="page-jump-row">
+          <button type="button" className="back-home" onClick={() => onNavigate('home')}>
+            Home
+          </button>
+          <button type="button" className="back-home" onClick={() => onNavigate('breakdown')}>
+            System Breakdown
+          </button>
+        </div>
         <p className="eyebrow">Case-study branch</p>
         <h1>{study.title}</h1>
         <p>
@@ -417,7 +502,7 @@ function SuggestedNextButton({ activeView, onNavigate }) {
 
   const nextModule = modules.find((module) => module.id === nextView);
   const nextStudy = caseStudies.find((study) => study.id === nextView);
-  const label = nextView === 'home' ? 'System Map' : nextModule?.title || nextStudy?.title;
+  const label = nextView === 'home' ? 'Home' : nextModule?.title || nextStudy?.title;
 
   return (
     <button type="button" className="suggested-next" onClick={() => onNavigate(nextView)}>
@@ -431,15 +516,28 @@ function ReferencesPage({ returnView, onReturn, onNavigate }) {
   return (
     <section className="site-view">
       <div className="references-shell">
-        <button type="button" className="back-home" onClick={() => onNavigate('home')}>
-          System map
-        </button>
+        <div className="page-jump-row">
+          <button type="button" className="back-home" onClick={() => onNavigate('home')}>
+            Home
+          </button>
+          <button type="button" className="back-home" onClick={() => onNavigate('breakdown')}>
+            System Breakdown
+          </button>
+        </div>
         {returnView && (
           <button type="button" className="return-button" onClick={onReturn}>
-            Back to {returnView === 'home' ? 'System map' : modules.find((module) => module.id === returnView)?.nav}
+            Back to {returnView === 'home' ? 'Home' : modules.find((module) => module.id === returnView)?.nav}
           </button>
         )}
         <MarkdownPage pageIndex={referencesPageIndex} plain onInternalLink={onNavigate} />
+        <div className="reference-jump-list">
+          <p className="eyebrow">Jump to where each source is used</p>
+          {referenceSourceLinks.map((link) => (
+            <button key={link.label} type="button" onClick={() => onNavigate(link.target)}>
+              {link.label}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -492,7 +590,10 @@ function App() {
         <div className="side-menu-group">
           <p>Hub</p>
           <button type="button" onClick={() => goToView('home')} className={activeView === 'home' ? 'active' : ''}>
-            System Map
+            Home
+          </button>
+          <button type="button" onClick={() => goToView('breakdown')} className={activeView === 'breakdown' ? 'active' : ''}>
+            System Breakdown
           </button>
         </div>
         <div className="side-menu-group">
@@ -531,6 +632,7 @@ function App() {
 
       <div ref={viewRef} className="view-scroll">
         {activeView === 'home' && <Landing onNavigate={goToInternalView} />}
+        {activeView === 'breakdown' && <SystemBreakdown onNavigate={goToView} />}
         {activeModule && (
           <>
             <ModulePage module={activeModule} onNavigate={goToView} onInternalLink={goToInternalView} />
