@@ -191,10 +191,11 @@ main {
 }
 
 .title-screen {
-  min-height: calc(100vh - clamp(2.5rem, 8vw, 8rem));
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: clamp(4rem, 10vw, 8rem);
 }
 
 .title-screen h1 {

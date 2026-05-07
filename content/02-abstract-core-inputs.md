@@ -1,6 +1,3 @@
-# Zimmer Abstracts the Film Into Core Inputs
-
-
 **Listening Guide**
 ## Please play the soundtrack below before Beginning (Day One)
 

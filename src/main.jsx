@@ -323,7 +323,7 @@ function Landing({ onNavigate }) {
   return (
     <section className="site-view landing-view">
       <div className="title-screen">
-        <p className="eyebrow">Interactive essay</p>
+        <p className="eyebrow">Film-score systems study</p>
         <h1>Hans Zimmer&apos;s Music Production as a System</h1>
         <p>By Pranav Mantri PYM2105</p>
       </div>
