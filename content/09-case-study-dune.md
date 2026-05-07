@@ -10,7 +10,7 @@ This directly connects to the larger structure of Zimmer’s system. Earlier sec
 
 The soundtrack also demonstrates Zimmer’s modular approach to scoring. Similar processed vocal textures return throughout the film in different forms and intensities, allowing the music to preserve coherence without relying on repeated melodic themes. The voices become recurring behaviors that communicate authority, mysticism, and instability across multiple scenes.
 
-Rather than functioning as decorative atmosphere, the vocal textures operate structurally within the soundtrack. Zimmer transforms the human voice into a flexible musical material that can repeatedly encode the film’s systems of power and hierarchy. This reinforces the broader argument that Zimmer’s scores generate coherence procedurally through recurring sonic logic rather than through surface level stylistic repetition.
+Rather than functioning as decorative atmosphere, the vocal textures operate structurally within the soundtrack. Zimmer transforms the human voice into a flexible musical material that can repeatedly encode the film’s systems of power and hierarchy. This reinforces the broader argument that Zimmer’s scores generate coherence procedurally through recurring sonic logic rather than through surface-level stylistic repetition.
 
 ## “Ripples in the Sand”: Texture and Environmental Sound
 
@@ -18,17 +18,17 @@ In “Ripples in the Sand,” Zimmer builds a dense percussive soundscape that b
 
 This reflects the physical instability of the desert environment itself. The music feels uneven and constantly moving, mirroring the unpredictability of Arrakis. At the same time, the piece demonstrates another important part of Zimmer’s system: orchestration and texture carry as much meaning as melody or harmony. [Yinuo Luo’s study](page:references) of Zimmer’s Dune style also highlights his blending of electronic and acoustic textures to create a sound environment that feels physically tied to the desert world of Arrakis rather than externally imposed onto it.
 
-Earlier sections described Zimmer’s processing layer as the stage where abstract ideas are translated into sensory experience. “Ripples in the Sand” applies this process directly. The soundtrack does not simply describe the desert visually. It creates a environment that makes the instability and harshness of the world physically felt through rhythm, timbre, and density.
+Earlier sections described Zimmer’s processing layer as the stage where abstract ideas are translated into sensory experience. “Ripples in the Sand” applies this process directly. The soundtrack does not simply describe the desert visually. It creates an environment that makes the instability and harshness of the world physically felt through rhythm, timbre, and density.
 
 The track also reinforces Zimmer’s larger compositional logic. Rather than introducing completely new material for every scene, Zimmer reuses and transforms rhythmic behaviors, textures, and orchestral patterns across the soundtrack. Coherence is achieved through repetition and variation of processes rather than through fixed melodic identity.
 
 ## “Leaving Caladan”: Scale and Transformation
 
-In “Leaving Caladan,” Zimmer combines orchestral elemants with synthesized textures and layered vocals to create a feeling of transition and large scale movement. Sustained tones gradually build in intensity while additional instruments slowly enter the texture. Rather than moving through complicated harmonic changes, the music develops through accumulation and expansion.
+In “Leaving Caladan,” Zimmer combines orchestral elements with synthesized textures and layered vocals to create a feeling of transition and large-scale movement. Sustained tones gradually build in intensity while additional instruments slowly enter the texture. Rather than moving through complicated harmonic changes, the music develops through accumulation and expansion.
 
 This directly connects back to the larger argument about modularity and transformation within Zimmer’s system. Earlier sections discussed how Zimmer often starts with very simple musical material and then changes its meaning through orchestration, layering, and pacing. “Leaving Caladan” follows this same process. The track grows larger not because the underlying musical ideas become more complicated, but because the texture surrounding them becomes denser and more forceful.
 
-The gradual increase of sound also mirrors the narrative transition taking place within the film. As Paul and House Atreides move away from Caladan and toward Arrakis, the music increasingly abandons stability and familiarity. Zimmer communicates this shift not through abrupt thematic change, but through transformation within the existing framework of the sound.
+The gradual increase of sound also mirrors the narrative transition taking place within the film. As Paul and House Atreides move away from Caladan and toward Arrakis, the music increasingly abandons stability and familiarity. Zimmer communicates this shift not through abrupt thematic change, but through transformation within the existing sonic framework.
 
 The same procedural logic seen earlier in Inception and Interstellar appears here in a different form. Zimmer adapts his methods to fit the world of Dune while preserving the same underlying structure: abstract the central narrative idea, translate it into sound through timbre and texture, and allow the music to evolve through repetition and transformation.
 

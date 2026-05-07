@@ -2,7 +2,7 @@ Interstellar demonstrates the central role of the processing layer within Zimmer
 
 ## “Cornfield Chase”: Intimacy and Repetition
 
-In “Cornfield Chase,” Zimmer introduces a repeating rhythmic figure played on organ and layered instruments. The motif is simple and cyclical, creating a sense of continuity and quiet momentum. Unlike the large scale intensity often associated with science fiction, the music here is restrained and intimate.
+In “Cornfield Chase,” Zimmer introduces a repeating rhythmic figure played on organ and layered instruments. The motif is simple and cyclical, creating a sense of continuity and quiet momentum. Unlike the large-scale intensity often associated with science fiction, the music here is restrained and intimate.
 
 This reflects the film’s grounding in human experience. The use of organ timbre, warm yet resonant, bridges the personal and the cosmic. Even in moments of relative calm, the sound carries a sense of scale that extends beyond the immediate scene. The result is a piece that situates the listener between domestic familiarity and vast unknown space.
 
@@ -20,7 +20,7 @@ The piece also reinforces Zimmer’s modular approach to film scoring. Musical i
 
 ## “S.T.A.Y.”: Recurrence and Emotional Transformation
 
-In “S.T.A.Y.,” Zimmer returns to previously established musical material and reframes it through a dramatically different emotional context. The piece retains the restrained harmonic language and organ centered timbre heard earlier in the soundtrack, but the emotional weight of these sounds has fundamentally changed because of the narrative journey surrounding Cooper and Murph.
+In “S.T.A.Y.,” Zimmer returns to previously established musical material and reframes it through a dramatically different emotional context. The piece retains the restrained harmonic language and organ-centered timbre heard earlier in the soundtrack, but the emotional weight of these sounds has fundamentally changed because of the narrative journey surrounding Cooper and Murph.
 
 The piece unfolds slowly, allowing notes and resonances to linger and avoid immediate resolution. Rather than introducing an entirely new theme for the emotional climax of the film, Zimmer relies on recurrence and transformation. Familiar textures return with greater orchestral weight and emotional gravity, creating the sense that the music itself has accumulated meaning over time. The piece feels emotionally overwhelming not because the material is complex, but because the listener has already lived with variations of these sounds throughout the film.
 
@@ -30,7 +30,7 @@ The piece therefore shows how Zimmer’s system creates emotional accumulation p
 
 ## Conclusion: Timbre as Thought
 
-Across these piece, Zimmer does not attempt to make space sound “realistic.” Instead, he constructs a soundscape in which timbre and orchestration shape the listener’s perception of scale, emotion, and meaning. This directly reflects the broader structure of Zimmer’s system described throughout this analysis: abstract narrative concepts are translated into flexible musical behaviors through recurring compositional processes.
+Across these pieces, Zimmer does not attempt to make space sound “realistic.” Instead, he constructs a soundscape in which timbre and orchestration shape the listener’s perception of scale, emotion, and meaning. This directly reflects the broader structure of Zimmer’s system described throughout this analysis: abstract narrative concepts are translated into flexible musical behaviors through recurring compositional processes.
 
 In Interstellar, the core input of cosmic scale and human fragility is not expressed primarily through melody, but through resonance, texture, repetition, and sustained sonic weight. The same modular and procedural logic visible in Inception and The Dark Knight appears here in a different form. Zimmer adapts his methods to the emotional and narrative demands of the film while preserving the underlying structure of his approach.
 
